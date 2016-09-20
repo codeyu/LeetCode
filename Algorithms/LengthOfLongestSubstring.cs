@@ -17,13 +17,39 @@
 * Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 *               
 **********************************************************************************/
+using System.Collections.Generic;
+using System;
 namespace Algorithms
 {
     public class Solution003 
     {
         public static int LengthOfLongestSubstring(string s)
         {
-            return 0;
+            var start = 0;
+            var tail = 0;
+            var maxLength = 0;
+            var charSet = new HashSet<char>();
+            
+            for(var i =0; i < s.Length; i++)
+            {
+                if(charSet.Add(s[i]))
+                {
+                    tail++;
+                }
+                else
+                {
+                    if(tail>maxLength)
+                    {
+                        maxLength = tail;        
+                    }
+                    tail = 0;
+                    start++;
+                    i = start - 1;
+                    charSet.Clear();
+                    continue;
+                }
+            }
+            return maxLength;
         }
     }
 }
