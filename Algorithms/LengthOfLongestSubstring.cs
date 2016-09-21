@@ -25,28 +25,20 @@ namespace Algorithms
     {
         public static int LengthOfLongestSubstring(string s)
         {
-            var start = 0;
-            var tail = 0;
-            var maxLength = 0;
+            var n = s.Length;
             var charSet = new HashSet<char>();
-            
-            for(var i =0; i < s.Length; i++)
+            int maxLength = 0, i = 0, j = 0;
+            while (i < n && j < n) 
             {
-                if(charSet.Add(s[i]))
+                if (charSet.Add(s[j]))
                 {
-                    tail++;
+                    j++;
+                    maxLength = Math.Max(maxLength, j - i);
                 }
-                else
+                else 
                 {
-                    if(tail>maxLength)
-                    {
-                        maxLength = tail;        
-                    }
-                    tail = 0;
-                    start++;
-                    i = start - 1;
-                    charSet.Clear();
-                    continue;
+                    charSet.Remove(s[i]);
+                    i++;
                 }
             }
             return maxLength;
