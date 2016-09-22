@@ -9,13 +9,14 @@
  * substring.
  ***************************************************************************************/
 
+using System;
 namespace Algorithms
 {
     public class Solution005 
     {
         public static string LongestPalindromicSubstring(string s) 
         {
-            return "";
+            throw new NotImplementedException("TODO");
         }
     }
 }
