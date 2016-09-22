@@ -28,6 +28,6 @@ NUM=`echo ${title_str} | awk -F '.' '{print $1}'`
 TITLE=`echo ${title_str} | awk -F '.' '{print $2}' | sed -e 's/^[[:space:]]*//'`
 DIFFCULT=`xidel ${URL} -q -e "css('.question-info')" | grep Difficulty | awk '{print $2}'`
 
-FILE=`echo ${FILE} | sed "s/.*\/algorithms/\.\/algorithms/"`
+FILE=`echo ${FILE} | sed "s/.*\/Algorithms/\.\/Algorithms/"`
 
 echo "|${NUM}|[${TITLE}](${URL}) | [C#](${FILE})|${DIFFCULT}|"
