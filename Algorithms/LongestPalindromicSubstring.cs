@@ -8,11 +8,16 @@
  * the maximum length of S is 1000, and there exists one unique longest palindromic 
  * substring.
  ***************************************************************************************/
-
+using System;
 namespace Algorithms
 {
     public class Solution005 
     {
+        public static string LongestPalindromicWithSuffixTree(string s) 
+        {
+            throw new NotImplementedException("TODO");
+        }
+
         public static string LongestPalindromicSubstring(string s) 
         {
             var n = s.Length;
