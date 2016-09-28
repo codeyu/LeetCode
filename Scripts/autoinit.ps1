@@ -10,7 +10,7 @@ $DIFFCULT = ($HTML.ParsedHtml.getElementsByTagName(‘div’) | Where{ $_.classN
 $AUTHOR = $command
 $CURRENT_DATE = (Get-Date).ToShortDateString()
 $NUM = $QuestionTitle.Split(".")[0].Trim().PadLeft(3).Replace(" ", "0") 
-$TITLE = $QuestionTitle.Split(".")[1].Trim()
+$TITLE = $QuestionTitle.Split(".")[1].Trim().Replace("(", "_").Replace(")", "")
 $FILE = $TITLE.Replace(" ", "") + ".cs"
 
 $COMMENT += "$COMMENT_TAG Source : $URL `n"
@@ -38,4 +38,4 @@ $COMMENT += "    }`n"
 $COMMENT += "}`n"
 $COMMENT > ../Algorithms/$FILE
 
-"`n|$NUM|[$TITLE]($URL) | [C#](./Algorithms/$FILE)|$DIFFCULT|" | Out-File -Append ../README.md
+"|$NUM|[$TITLE]($URL) | [C#](./Algorithms/$FILE)|$DIFFCULT|" | Out-File -Encoding "utf8" -Append ../README.md
