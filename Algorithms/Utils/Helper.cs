@@ -18,7 +18,7 @@ namespace Algorithms.Utils
                 }
                 return head;
             }
-            throw new Exception("input is not a valid array");
+            throw new Exception("input is not a valid List");
         }
         public static List<int> ToList(this ListNode<int> node)
         {

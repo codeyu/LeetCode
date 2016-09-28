@@ -1,14 +1,17 @@
-using System.Collections.Generic;
+
 using Algorithms;
-using Algorithms.Utils;
 using Xunit;
 namespace AlgorithmsTest
 {
     public class ReverseIntegerTest
     {
-        public int Reverse(int x) 
+        [Theory]
+        [InlineData(2147483647, 0)]
+        [InlineData(123, 321)]
+        [InlineData(100, 1)]
+        public void Test_Reverse(int x, int output) 
         {
-        
+            Assert.Equal(output,Solution007.Reverse(x));
         }
     }
 }
