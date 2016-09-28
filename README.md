@@ -14,4 +14,4 @@ LeetCode
 |005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [C#](./Algorithms/LongestPalindromicSubstring.cs)|Medium|
 |006|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [C#](./Algorithms/ZigZagConversion.cs)|Easy|
 |007|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C#](./Algorithms/ReverseInteger.cs)|Easy|
-|008|[String to Integer _atoi](https://leetcode.com/problems/string-to-integer-atoi/) | [C#](./Algorithms/StringtoInteger_atoi.cs)|Easy|
+|008|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C#](./Algorithms/StringtoInteger_atoi.cs)|Easy|
