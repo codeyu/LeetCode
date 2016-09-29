@@ -15,3 +15,4 @@ LeetCode
 |006|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [C#](./Algorithms/ZigZagConversion.cs)|Easy|
 |007|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C#](./Algorithms/ReverseInteger.cs)|Easy|
 |008|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C#](./Algorithms/StringtoInteger_atoi.cs)|Easy|
+|009|[Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [C#](./Algorithms/PalindromeNumber.cs)|Easy|
