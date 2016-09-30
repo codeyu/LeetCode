@@ -16,3 +16,4 @@ LeetCode
 |007|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C#](./Algorithms/ReverseInteger.cs)|Easy|
 |008|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [C#](./Algorithms/StringtoInteger_atoi.cs)|Easy|
 |009|[Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [C#](./Algorithms/PalindromeNumber.cs)|Easy|
+|010|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | [C#](./Algorithms/RegularExpressionMatching.cs)|Hard|
