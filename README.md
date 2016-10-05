@@ -19,3 +19,4 @@ LeetCode
 |010|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | [C#](./Algorithms/RegularExpressionMatching.cs)|Hard|
 |011|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [C#](./Algorithms/ContainerWithMostWater.cs)|Medium|
 |012|[Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [C#](./Algorithms/IntegertoRoman.cs)|Medium|
+|013|[Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [C#](./Algorithms/RomantoInteger.cs)|Easy|
