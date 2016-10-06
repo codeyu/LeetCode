@@ -31,13 +31,13 @@ if ($IsWindows)
     $JSON = $NG.getAttributeNode('ng-init').Value
 }
 else{
-    $QuestionContent = ($HTML.Content | pup -p 'div[class=\"question-content\"] > :not(div) text{}').Split("`n")
+    $QuestionContent = ($HTML.Content | pup 'head meta[name=\"description\"] attr{content}').Split("`n")
     $QuestionTitle = $HTML.Content | pup 'div[class=\"question-title clearfix\"] > h3 text{}'
     $DIFFCULT = ($HTML.Content | pup 'div[class=\"question-info text-info\"] > ul > li:last-child text{}').Split(":")[2].Trim()
     $JSON = $HTML.Content | pup -p 'div[ng-controller=\"AceCtrl as aceCtrl\"] attr{ng-init}'
 }
 $AUTHOR = $command
-$CURRENT_DATE = (Get-Date).ToShortDateString()
+$CURRENT_DATE = Get-Date -format F
 $NUM = $QuestionTitle.Split(".")[0].Trim().PadLeft(3).Replace(" ", "0") 
 $TITLE = $QuestionTitle.Split(".")[1].Trim().Replace("(", "_").Replace(")", "")
 $FILE = $TITLE.Replace(" ", "") + ".cs"
