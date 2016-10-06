@@ -23,3 +23,5 @@ LeetCode
 |014|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [C#](./Algorithms/LongestCommonPrefix.cs)|Easy|
 |015|[3Sum](https://leetcode.com/problems/3sum/) | [C#](./Algorithms/3Sum.cs)|Medium|
 |016|[3Sum Closest](https://leetcode.com/problems/3sum-closest/) | [C#](./Algorithms/3SumClosest.cs)|Medium|
+|017|[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [C#](./Algorithms/LetterCombinationsofaPhoneNumber.cs)|Medium|
+|018|[4Sum](https://leetcode.com/problems/4sum/) | [C#](./Algorithms/4Sum.cs)|Medium|

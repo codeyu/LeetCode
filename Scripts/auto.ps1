@@ -31,8 +31,8 @@ if ($IsWindows)
     $JSON = $NG.getAttributeNode('ng-init').Value
 }
 else{
-    $QuestionContent = ($HTML.Content | pup 'head meta[name=\"description\"] attr{content}').Split("`n")
-    $QuestionTitle = $HTML.Content | pup 'div[class=\"question-title clearfix\"] > h3 text{}'
+    $QuestionContent = ($HTML.Content | pup -p 'head meta[name=\"description\"] attr{content}').Split("`n")
+    $QuestionTitle = $HTML.Content | pup -p 'div[class=\"question-title clearfix\"] > h3 text{}'
     $DIFFCULT = ($HTML.Content | pup 'div[class=\"question-info text-info\"] > ul > li:last-child text{}').Split(":")[2].Trim()
     $JSON = $HTML.Content | pup -p 'div[ng-controller=\"AceCtrl as aceCtrl\"] attr{ng-init}'
 }
