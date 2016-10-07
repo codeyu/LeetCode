@@ -78,5 +78,25 @@ namespace Algorithms.Utils
                 MainMerge(numbers, left, (mid + 1), right);
             }
         }
+
+        
+        private static int Partition(int[] a, int low, int high)
+        {
+            int privotKey = a[low];
+            while(low < high)
+            {
+                while(low < high && a[high] >= privotKey){ high--; }
+                Swap(a[low], a[high]);
+                while(low < high && a[low] <= privotKey){ low++; }
+                Swap(a[low], a[high]);
+            }
+            return low;
+        }
+        static void Swap(int a, int b)
+        {
+            var tmp = a;
+            a = b;
+            b = tmp;
+        }
     }
 }
