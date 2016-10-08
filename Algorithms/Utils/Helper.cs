@@ -30,7 +30,68 @@ namespace Algorithms.Utils
             }
             return lst;
         }
-
+        public static void BubbleSort(int[] nums)
+        {
+            for(int i = 0; i < nums.Length - 1; i++)
+            {
+                for(int j=0; j< nums.Length - 1 - i; j++)
+                {
+                    if(nums[j] > nums[j+1])
+                    {
+                        int tmp = nums[j];
+                        nums[j] = nums[j+1];
+                        nums[j+1] = tmp;
+                    }
+                }
+            }
+        }
+        public static void BubbleSort2(int[] nums)
+        {
+            int i = nums.Length - 1;
+            while(i > 0)
+            {
+                int pos = 0;
+                for(int j = 0; j < i; j++)
+                {
+                    if(nums[j] > nums[j+1])
+                    {
+                        pos = j;//记录交换的位置
+                        int tmp = nums[j];
+                        nums[j] = nums[j+1];
+                        nums[j+1] = tmp;
+                    }
+                }
+            }
+        }
+        public static void BubbleSort3(int[] nums)
+        {
+            int low = 0;
+            int high = nums.Length - 1;
+            int tmp, j;
+            while(low < high)
+            {
+                for(j=low; j<high;j++)
+                {
+                    if(nums[j] > nums[j+1])
+                    {
+                        tmp = nums[j];
+                        nums[j] = nums[j+1];
+                        nums[j+1] = tmp;
+                    }
+                }
+                high--;
+                for(j=high;j>low;j--)
+                {
+                    if(nums[j] < nums[j-1])
+                    {
+                        tmp = nums[j];
+                        nums[j] = nums[j-1];
+                        nums[j-1] = tmp;
+                    }
+                }
+                low++;
+            }
+        }
         public static void Sort(int[] arr)
         {
             SortMerge(arr, 0, arr.Length - 1);
@@ -79,7 +140,16 @@ namespace Algorithms.Utils
             }
         }
 
-        
+        public static void QuickSort(int[] nums)
+        {
+            QuickSort(nums, 0 , nums.Length - 1);
+        }
+        private static void QuickSort(int[] nums, int low, int high)
+        {
+            int privotLoc = Partition(nums,low,high);
+            QuickSort(nums,low,privotLoc - 1);
+            QuickSort(nums, privotLoc + 1, high);
+        }
         private static int Partition(int[] a, int low, int high)
         {
             int privotKey = a[low];
