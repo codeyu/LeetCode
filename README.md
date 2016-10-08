@@ -3,7 +3,7 @@ LeetCode
 
 ### LeetCode Algorithms
 
-(Notes: ":lock:" means you need to buy a book from Leetcode)
+(Notes: ":lock:" means you need to [subscribe to **premium membership**](https://leetcode.com/subscribe/) from Leetcode)
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
