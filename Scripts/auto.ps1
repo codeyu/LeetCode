@@ -24,7 +24,7 @@ try {
 $HTML = Invoke-WebRequest -Uri $URL
 if ($IsWindows)
 {
-    $QuestionContent = ($HTML.ParsedHtml.getElementsByTagName(‘div’) | Where{ $_.className -eq ‘question-content’ } ).innerText.Split("`n")
+    $QuestionContent = ($HTML.ParsedHtml.getElementsByTagName(‘meta’) | where {$_.getAttributeNode('name').Value -eq 'description'} ).content.Split("`n")
     $QuestionTitle = (($HTML.ParsedHtml.getElementsByTagName(‘div’) | Where{ $_.className -eq ‘question-title clearfix’ })).innerText.Split("`n")[0]
     $DIFFCULT = ($HTML.ParsedHtml.getElementsByTagName(‘div’) | Where{ $_.className -eq ‘question-info text-info’ } ).innerText.Split("`n")[2].Split(":")[1].Trim()
     $NG =  ($HTML.ParsedHtml.body.getElementsByTagName(‘div’) | where {$_.getAttributeNode('ng-controller').Value -eq 'AceCtrl as aceCtrl'} )
@@ -46,7 +46,7 @@ if ($IsWindows)
 {
     $START = $JSON.IndexOf("[{")
     $END = $JSON.IndexOf("},],")
-    $JSON = $JSON.Remove($END - 1).Trim() + "]"
+    $JSON = $JSON.Remove($END).Trim() + "}]"
     $CODE = $JSON.Substring($START)
 }
 else {

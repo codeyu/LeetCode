@@ -12,7 +12,7 @@
 * Output: 7 -> 0 -> 8
 *               
 **********************************************************************************/
-
+using Algorithms.Utils;
 namespace Algorithms
 {
     public class Solution002 
@@ -37,12 +37,5 @@ namespace Algorithms
             return head.Next;
         }
          
-    }
-
-    public class ListNode<T> 
-    {
-        public T Val {get;set;}
-        public ListNode<T> Next{get;set;}
-        public ListNode(T x) { Val = x; }
     }
 }
