@@ -61,6 +61,7 @@ namespace Algorithms.Utils
                         nums[j+1] = tmp;
                     }
                 }
+                i = pos;
             }
         }
         public static void BubbleSort3(int[] nums)
