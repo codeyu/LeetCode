@@ -57,6 +57,11 @@ else {
 
 $CSHARP = $CODE | ConvertFrom-Json 
 $CLASS = ($CSHARP | where { $_.value -eq 'csharp' }).defaultCode
+$regex = [regex]"(?s)\bSolution\b\s\{(.*?)\{"
+$FuncInfo = $regex.Matches($CLASS).Groups[1].Value
+$ReturnType = $FuncInfo.Trim().Split(' ')[1]
+$FunName = $FuncInfo.Trim().Split(' ')[2].Substring(0,$FuncInfo.Trim().Split(' ')[2].IndexOf('('))
+$Params = $FuncInfo.Trim().Substring($FuncInfo.Trim().IndexOf('(')).Replace("(","").Replace(")","")
 $CLASS = $CLASS.Insert($CLASS.IndexOf("Solution") + 8, $NUM)
 $CLASS = $CLASS.Insert($CLASS.LastIndexOf("public") + 7, "static ")
 $CLASS = $CLASS.Insert($CLASS.IndexOf(") {") + 4, "throw new NotImplementedException(`"TODO`");")
@@ -64,7 +69,7 @@ $COMMENT += "$COMMENT_TAG Source : $URL `n"
 $COMMENT += "$COMMENT_TAG Author : $AUTHOR `n"
 $COMMENT += "$COMMENT_TAG Date : $CURRENT_DATE `n"
 $COMMENT += "`n"
-$COMMENT += "/***************************************************************************************`n"
+$COMMENT += "/**********************************************************************************`n"
 $COMMENT += "*`n"
 
 $TAIL = $QuestionContent.Length
@@ -74,8 +79,7 @@ foreach($a in $QuestionContent[0 .. $TAIL] ){
 $COMMENT += "*`n"
 $COMMENT += "**********************************************************************************/`n"
 $COMMENT += "`n"
-$COMMENT += "using System;`n"
-$COMMENT += "using System.Collections.Generic;`n"
+$COMMENT += "using System;`nusing System.Collections.Generic;`nusing Algorithms.Utils;`n"
 $COMMENT += "namespace Algorithms`n"
 $COMMENT += "{`n"
 $COMMENT += $CLASS
@@ -83,14 +87,14 @@ $COMMENT += "}`n"
 $COMMENT > ../Algorithms/$FILE
 
 $TESTCLASSNAME = $TITLE.Replace(" ", "") + "Test"
-$TESTCLASS = "using Algorithms;`nusing Xunit;`nnamespace AlgorithmsTest`n{`n"
+$TESTCLASS = "using System;`nusing System.Collections.Generic;`nusing Algorithms;`nusing Algorithms.Utils;`nusing Xunit;`nnamespace AlgorithmsTest`n{`n"
 $TESTCLASS += "    public class $TESTCLASSNAME`n"
 $TESTCLASS += "    {`n"
 $TESTCLASS += "        [Theory]`n"
 $TESTCLASS += "        [InlineData()]`n"
-$TESTCLASS += "        public void TestMethod(var output)`n"
+$TESTCLASS += "        public void TestMethod($Params, $ReturnType output)`n"
 $TESTCLASS += "        {`n" 
-$TESTCLASS += "            Assert.Equal(output, Solution$NUM.var());`n" 
+$TESTCLASS += "            Assert.Equal(output, Solution$NUM.$FunName());`n" 
 $TESTCLASS += "        }`n" 
 $TESTCLASS += "    }`n"
 $TESTCLASS += "}`n" 

@@ -30,3 +30,4 @@ LeetCode
 |021|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [C#](./Algorithms/MergeTwoSortedLists.cs)|Easy|
 |022|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [C#](./Algorithms/GenerateParentheses.cs)|Medium|
 |023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#](./Algorithms/MergekSortedLists.cs)|Hard|
+|024|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C#](./Algorithms/SwapNodesinPairs.cs)|Easy|
