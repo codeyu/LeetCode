@@ -31,3 +31,4 @@ LeetCode
 |022|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [C#](./Algorithms/GenerateParentheses.cs)|Medium|
 |023|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [C#](./Algorithms/MergekSortedLists.cs)|Hard|
 |024|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [C#](./Algorithms/SwapNodesinPairs.cs)|Easy|
+|025|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [C#](./Algorithms/ReverseNodesink-Group.cs)|Hard|
