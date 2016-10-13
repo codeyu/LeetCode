@@ -34,3 +34,4 @@ LeetCode
 |025|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [C#](./Algorithms/ReverseNodesink-Group.cs)|Hard|
 |026|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C#](./Algorithms/RemoveDuplicatesfromSortedArray.cs)|Easy|
 |027|[Remove Element](https://leetcode.com/problems/remove-element/) | [C#](./Algorithms/RemoveElement.cs)|Easy|
+|028|[Implement strStr](https://leetcode.com/problems/implement-strstr/) | [C#](./Algorithms/ImplementstrStr.cs)|Easy|
