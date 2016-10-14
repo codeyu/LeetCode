@@ -35,3 +35,4 @@ LeetCode
 |026|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C#](./Algorithms/RemoveDuplicatesfromSortedArray.cs)|Easy|
 |027|[Remove Element](https://leetcode.com/problems/remove-element/) | [C#](./Algorithms/RemoveElement.cs)|Easy|
 |028|[Implement strStr](https://leetcode.com/problems/implement-strstr/) | [C#](./Algorithms/ImplementstrStr.cs)|Easy|
+|029|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [C#](./Algorithms/DivideTwoIntegers.cs)|Medium|
