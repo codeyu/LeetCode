@@ -37,3 +37,4 @@ LeetCode
 |028|[Implement strStr](https://leetcode.com/problems/implement-strstr/) | [C#](./Algorithms/ImplementstrStr.cs)|Easy|
 |029|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [C#](./Algorithms/DivideTwoIntegers.cs)|Medium|
 |030|[Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | [C#](./Algorithms/SubstringwithConcatenationofAllWords.cs)|Hard|
+|031|[Next Permutation](https://leetcode.com/problems/next-permutation/) | [C#](./Algorithms/NextPermutation.cs)|Medium|
