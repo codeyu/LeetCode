@@ -39,3 +39,9 @@ LeetCode
 |030|[Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | [C#](./Algorithms/SubstringwithConcatenationofAllWords.cs)|Hard|
 |031|[Next Permutation](https://leetcode.com/problems/next-permutation/) | [C#](./Algorithms/NextPermutation.cs)|Medium|
 |032|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | [C#](./Algorithms/LongestValidParentheses.cs)|Hard|
+|033|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [C#](./Algorithms/SearchinRotatedSortedArray.cs)|Hard|
+|034|[Search for a Range](https://leetcode.com/problems/search-for-a-range/) | [C#](./Algorithms/SearchforaRange.cs)|Medium|
+|035|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [C#](./Algorithms/SearchInsertPosition.cs)|Medium|
+|036|[Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [C#](./Algorithms/ValidSudoku.cs)|Easy|
+|037|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | [C#](./Algorithms/SudokuSolver.cs)|Hard|
+|038|[Count and Say](https://leetcode.com/problems/count-and-say/) | [C#](./Algorithms/CountandSay.cs)|Easy|
