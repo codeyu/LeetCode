@@ -39,7 +39,7 @@ else{
 $AUTHOR = $command
 $CURRENT_DATE = Get-Date -format F
 $NUM = $QuestionTitle.Split(".")[0].Trim().PadLeft(3).Replace(" ", "0") 
-$TITLE = $QuestionTitle.Split(".")[1].Trim().Replace("(", "").Replace(")", "")
+$TITLE = $QuestionTitle.Split(".")[1].Trim().Replace("(", "").Replace(")", "").Replace(",", "").Replace("'", "").Replace("-", "")
 $FILE = $TITLE.Replace(" ", "") + ".cs"
 $TESTFILE = $TITLE.Replace(" ", "") + "Test.cs"
 if ($IsWindows)

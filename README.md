@@ -45,3 +45,14 @@ LeetCode
 |036|[Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [C#](./Algorithms/ValidSudoku.cs)|Easy|
 |037|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | [C#](./Algorithms/SudokuSolver.cs)|Hard|
 |038|[Count and Say](https://leetcode.com/problems/count-and-say/) | [C#](./Algorithms/CountandSay.cs)|Easy|
+|039|[Combination Sum](https://leetcode.com/problems/combination-sum/) | [C#](./Algorithms/CombinationSum.cs)|Medium|
+|040|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [C#](./Algorithms/CombinationSumII.cs)|Medium|
+|041|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [C#](./Algorithms/FirstMissingPositive.cs)|Hard|
+|042|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [C#](./Algorithms/TrappingRainWater.cs)|Hard|
+|043|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [C#](./Algorithms/MultiplyStrings.cs)|Medium|
+|043|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [C#](./Algorithms/MultiplyStrings.cs)|Medium|
+|045|[Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [C#](./Algorithms/JumpGameII.cs)|Hard|
+|046|[Permutations](https://leetcode.com/problems/permutations/) | [C#](./Algorithms/Permutations.cs)|Medium|
+|047|[Permutations II](https://leetcode.com/problems/permutations-ii/) | [C#](./Algorithms/PermutationsII.cs)|Medium|
+|048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C#](./Algorithms/RotateImage.cs)|Medium|
+|050|[Powx, n](https://leetcode.com/problems/powx-n/) | [C#](./Algorithms/Powx,n.cs)|Medium|
