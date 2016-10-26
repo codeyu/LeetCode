@@ -55,4 +55,4 @@ LeetCode
 |046|[Permutations](https://leetcode.com/problems/permutations/) | [C#](./Algorithms/Permutations.cs)|Medium|
 |047|[Permutations II](https://leetcode.com/problems/permutations-ii/) | [C#](./Algorithms/PermutationsII.cs)|Medium|
 |048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C#](./Algorithms/RotateImage.cs)|Medium|
-|050|[Powx, n](https://leetcode.com/problems/powx-n/) | [C#](./Algorithms/Powx,n.cs)|Medium|
+|050|[Powx, n](https://leetcode.com/problems/powx-n/) | [C#](./Algorithms/Powxn.cs)|Medium|
