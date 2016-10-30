@@ -50,7 +50,7 @@ LeetCode
 |041|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [C#](./Algorithms/FirstMissingPositive.cs)|Hard|
 |042|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [C#](./Algorithms/TrappingRainWater.cs)|Hard|
 |043|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [C#](./Algorithms/MultiplyStrings.cs)|Medium|
-|043|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [C#](./Algorithms/MultiplyStrings.cs)|Medium|
+|044|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | [C#](./Algorithms/WildcardMatching.cs)|Hard|
 |045|[Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [C#](./Algorithms/JumpGameII.cs)|Hard|
 |046|[Permutations](https://leetcode.com/problems/permutations/) | [C#](./Algorithms/Permutations.cs)|Medium|
 |047|[Permutations II](https://leetcode.com/problems/permutations-ii/) | [C#](./Algorithms/PermutationsII.cs)|Medium|
