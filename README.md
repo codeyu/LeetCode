@@ -1,6 +1,8 @@
 LeetCode
 ========
 
+[![Travis build status](https://img.shields.io/travis/codeyu/LeetCode.svg?label=travis-ci&branch=master&style=flat-square)](https://travis-ci.org/codeyu/LeetCode)
+[![Build status](https://ci.appveyor.com/api/projects/status/lek7s590ky46bym6?svg=true)](https://ci.appveyor.com/project/codeyu/leetcode)
 ### LeetCode Algorithms
 
 (Notes: ":lock:" means you need to [subscribe to **premium membership**](https://leetcode.com/subscribe/) from Leetcode)
