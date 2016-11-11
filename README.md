@@ -59,4 +59,8 @@ LeetCode
 |048|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [C#](./Algorithms/RotateImage.cs)|Medium|
 |049|[Group Anagrams](https://leetcode.com/problems/anagrams/) | [C#](./Algorithms/GroupAnagrams.cs)|Medium|
 |050|[Powx, n](https://leetcode.com/problems/powx-n/) | [C#](./Algorithms/Powxn.cs)|Medium|
-
+|051|[NQueens](https://leetcode.com/problems/n-queens/) | [C#](./Algorithms/NQueens.cs)|Hard|
+|052|[NQueens II](https://leetcode.com/problems/n-queens-ii/) | [C#](./Algorithms/NQueensII.cs)|Hard|
+|053|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C#](./Algorithms/MaximumSubarray.cs)|Medium|
+|054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C#](./Algorithms/SpiralMatrix.cs)|Medium|
+|055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C#](./Algorithms/JumpGame.cs)|Medium|
