@@ -64,3 +64,8 @@ LeetCode
 |053|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C#](./Algorithms/MaximumSubarray.cs)|Medium|
 |054|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [C#](./Algorithms/SpiralMatrix.cs)|Medium|
 |055|[Jump Game](https://leetcode.com/problems/jump-game/) | [C#](./Algorithms/JumpGame.cs)|Medium|
+|056|[Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [C#](./Algorithms/MergeIntervals.cs)|Hard|
+|057|[Insert Interval](https://leetcode.com/problems/insert-interval/) | [C#](./Algorithms/InsertInterval.cs)|Hard|
+|058|[Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | [C#](./Algorithms/LengthofLastWord.cs)|Easy|
+|059|[Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | [C#](./Algorithms/SpiralMatrixII.cs)|Medium|
+|060|[Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | [C#](./Algorithms/PermutationSequence.cs)|Medium|
