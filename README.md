@@ -69,3 +69,8 @@ LeetCode
 |058|[Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | [C#](./Algorithms/LengthofLastWord.cs)|Easy|
 |059|[Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | [C#](./Algorithms/SpiralMatrixII.cs)|Medium|
 |060|[Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | [C#](./Algorithms/PermutationSequence.cs)|Medium|
+|061|[Rotate List](https://leetcode.com/problems/rotate-list/) | [C#](./Algorithms/RotateList.cs)|Medium|
+|062|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [C#](./Algorithms/UniquePaths.cs)|Medium|
+|063|[Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | [C#](./Algorithms/UniquePathsII.cs)|Medium|
+|064|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [C#](./Algorithms/MinimumPathSum.cs)|Medium|
+|065|[Valid Number](https://leetcode.com/problems/valid-number/) | [C#](./Algorithms/ValidNumber.cs)|Hard|
