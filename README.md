@@ -74,3 +74,8 @@ LeetCode
 |063|[Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | [C#](./Algorithms/UniquePathsII.cs)|Medium|
 |064|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [C#](./Algorithms/MinimumPathSum.cs)|Medium|
 |065|[Valid Number](https://leetcode.com/problems/valid-number/) | [C#](./Algorithms/ValidNumber.cs)|Hard|
+|066|[Plus One](https://leetcode.com/problems/plus-one/) | [C#](./Algorithms/PlusOne.cs)|Easy|
+|067|[Add Binary](https://leetcode.com/problems/add-binary/) | [C#](./Algorithms/AddBinary.cs)|Easy|
+|068|[Text Justification](https://leetcode.com/problems/text-justification/) | [C#](./Algorithms/TextJustification.cs)|Hard|
+|069|[Sqrtx](https://leetcode.com/problems/sqrtx/) | [C#](./Algorithms/Sqrtx.cs)|Medium|
+|070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [C#](./Algorithms/ClimbingStairs.cs)|Easy|
