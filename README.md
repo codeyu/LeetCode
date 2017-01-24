@@ -84,3 +84,8 @@ LeetCode
 |073|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) | [C#](./Algorithms/SetMatrixZeroes.cs)|Medium|
 |074|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | [C#](./Algorithms/Searcha2DMatrix.cs)|Medium|
 |075|[Sort Colors](https://leetcode.com/problems/sort-colors) | [C#](./Algorithms/SortColors.cs)|Medium|
+|076|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | [C#](./Algorithms/MinimumWindowSubstring.cs)|Hard|
+|077|[Combinations](https://leetcode.com/problems/combinations/) | [C#](./Algorithms/Combinations.cs)|Medium|
+|078|[Subsets](https://leetcode.com/problems/subsets/) | [C#](./Algorithms/Subsets.cs)|Medium|
+|079|[Word Search](https://leetcode.com/problems/word-search/) | [C#](./Algorithms/WordSearch.cs)|Medium|
+|080|[Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [C#](./Algorithms/RemoveDuplicatesfromSortedArrayII.cs)|Medium|
