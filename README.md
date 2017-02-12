@@ -89,3 +89,4 @@ LeetCode
 |078|[Subsets](https://leetcode.com/problems/subsets/) | [C#](./Algorithms/Subsets.cs)|Medium|
 |079|[Word Search](https://leetcode.com/problems/word-search/) | [C#](./Algorithms/WordSearch.cs)|Medium|
 |080|[Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [C#](./Algorithms/RemoveDuplicatesfromSortedArrayII.cs)|Medium|
+|081|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | [C#](./Algorithms/SearchinRotatedSortedArrayII.cs)|Medium|
