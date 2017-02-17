@@ -90,3 +90,9 @@ LeetCode
 |079|[Word Search](https://leetcode.com/problems/word-search/) | [C#](./Algorithms/WordSearch.cs)|Medium|
 |080|[Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [C#](./Algorithms/RemoveDuplicatesfromSortedArrayII.cs)|Medium|
 |081|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | [C#](./Algorithms/SearchinRotatedSortedArrayII.cs)|Medium|
+|082|[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [C#](./Algorithms/RemoveDuplicatesfromSortedListII.cs)|Medium|
+|083|[Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [C#](./Algorithms/RemoveDuplicatesfromSortedList.cs)|Easy|
+|084|[Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | [C#](./Algorithms/LargestRectangleinHistogram.cs)|Hard|
+|085|[Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | [C#](./Algorithms/MaximalRectangle.cs)|Hard|
+|086|[Partition List](https://leetcode.com/problems/partition-list/) | [C#](./Algorithms/PartitionList.cs)|Medium|
+|087|[Scramble String](https://leetcode.com/problems/scramble-string/) | [C#](./Algorithms/ScrambleString.cs)|Hard|
