@@ -96,3 +96,4 @@ LeetCode
 |085|[Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | [C#](./Algorithms/MaximalRectangle.cs)|Hard|
 |086|[Partition List](https://leetcode.com/problems/partition-list/) | [C#](./Algorithms/PartitionList.cs)|Medium|
 |087|[Scramble String](https://leetcode.com/problems/scramble-string/) | [C#](./Algorithms/ScrambleString.cs)|Hard|
+|088|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/?tab=Description) | [C#](./Algorithms/MergeSortedArray.cs)|Easy|
