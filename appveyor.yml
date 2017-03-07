@@ -11,12 +11,9 @@ init:
 before_build:
 - appveyor-retry dotnet restore -v Minimal
 build_script:
-- dotnet build "Algorithms" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
 - dotnet build "AlgorithmsTest" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
 after_build:
 - dotnet pack "Algorithms" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
-- dotnet pack "AlgorithmsTest" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
-- dotnet publish "ConsoleApplication" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts\ConsoleApplication
 clone_depth: 1
 test_script:
 - dotnet test "AlgorithmsTest" -c %CONFIGURATION%
