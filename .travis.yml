@@ -39,4 +39,4 @@ install:
 # Run the build script
 script:
   - travis_retry dotnet restore --disable-parallel
-  - dotnet build AlgorithmsTest -verbose
+  - dotnet build AlgorithmsTest
