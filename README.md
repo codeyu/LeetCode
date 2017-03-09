@@ -107,3 +107,6 @@ LeetCode
 |096|[Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees) | [C#](./Algorithms/UniqueBinarySearchTrees.cs)|Medium|
 |097|[Interleaving String](https://leetcode.com/problems/interleaving-string) | [C#](./Algorithms/InterleavingString.cs)|Hard|
 |098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree) | [C#](./Algorithms/ValidateBinarySearchTree.cs)|Medium|
+|099|[Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | [C#](./Algorithms/RecoverBinarySearchTree.cs)|Hard|
+|100|[Same Tree](https://leetcode.com/problems/same-tree/) | [C#](./Algorithms/SameTree.cs)|Easy|
+|101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [C#](./Algorithms/SymmetricTree.cs)|Easy|
