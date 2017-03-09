@@ -97,3 +97,13 @@ LeetCode
 |086|[Partition List](https://leetcode.com/problems/partition-list/) | [C#](./Algorithms/PartitionList.cs)|Medium|
 |087|[Scramble String](https://leetcode.com/problems/scramble-string/) | [C#](./Algorithms/ScrambleString.cs)|Hard|
 |088|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/?tab=Description) | [C#](./Algorithms/MergeSortedArray.cs)|Easy|
+|089|[Gray Code](https://leetcode.com/problems/gray-code/?tab=Description) | [C#](./Algorithms/GrayCode.cs)|Medium|
+|090|[Subsets II](https://leetcode.com/problems/subsets-ii/?tab=Description) | [C#](./Algorithms/SubsetsII.cs)|Medium|
+|091|[Decode Ways](https://leetcode.com/problems/decode-ways) | [C#](./Algorithms/DecodeWays.cs)|Medium|
+|092|[Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii) | [C#](./Algorithms/ReverseLinkedListII.cs)|Medium|
+|093|[Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses) | [C#](./Algorithms/RestoreIPAddresses.cs)|Medium|
+|094|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal) | [C#](./Algorithms/BinaryTreeInorderTraversal.cs)|Medium|
+|095|[Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii) | [C#](./Algorithms/UniqueBinarySearchTreesII.cs)|Medium|
+|096|[Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees) | [C#](./Algorithms/UniqueBinarySearchTrees.cs)|Medium|
+|097|[Interleaving String](https://leetcode.com/problems/interleaving-string) | [C#](./Algorithms/InterleavingString.cs)|Hard|
+|098|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree) | [C#](./Algorithms/ValidateBinarySearchTree.cs)|Medium|
