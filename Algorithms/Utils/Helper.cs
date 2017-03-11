@@ -20,6 +20,10 @@ namespace Algorithms.Utils
             }
             throw new Exception("input is not a valid List");
         }
+        public static TreeNode ToTreeNode(this int?[] arr)
+        {
+            throw new NotImplementedException("TODO");
+        }
         public static List<int> ToList(this ListNode<int> node)
         {
             var lst = new List<int>();
