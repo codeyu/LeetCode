@@ -1,20 +1,14 @@
-version: '1.0.{build}'
-configuration:
-- Debug
-- Release
-platform: Any CPU
-environment:
-  # Don't report back to the mothership
-  DOTNET_CLI_TELEMETRY_OPTOUT: 1
 init:
-- ps: $Env:LABEL = "CI" + $Env:APPVEYOR_BUILD_NUMBER.PadLeft(5, "0")
-before_build:
-- appveyor-retry dotnet restore -v Minimal
+  - git config --global core.autocrlf true
+branches:
+  only:
+    - master
+    - release
+    - dev
+    - /^(.*\/)?ci-.*$/
 build_script:
-- dotnet build "Algorithms" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet build "AlgorithmsTest" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-after_build:
-- dotnet pack "Algorithms" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+  - ps: .\build.ps1
 clone_depth: 1
-test_script:
-- dotnet test "AlgorithmsTest" -c %CONFIGURATION%
+test: off
+deploy: off
+os: Visual Studio 2017
