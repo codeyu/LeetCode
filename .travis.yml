@@ -21,3 +21,4 @@ script:
   - dotnet restore "AlgorithmsTest"
   - dotnet build "Algorithms"
   - dotnet build "AlgorithmsTest"
+   - dotnet test "AlgorithmsTest"
