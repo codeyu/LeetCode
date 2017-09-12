@@ -53,9 +53,9 @@ if ($IsWindows)
     $CODE = $JSON.Substring($START)
 }
 else {
-    $pattern = "\[\{'.*\},\]"
+    $pattern = "(?s)\[\{'.*\},\]"
     $CODE = $JSON -match $pattern
-    $CODE = $CODE.Substring(0,$CODE.LastIndexOf(",")).Trim()
+    $CODE = $matches[0]
 }
 
 $CSHARP = $CODE | ConvertFrom-Json 
