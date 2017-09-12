@@ -32,8 +32,8 @@ if ($IsWindows)
 }
 else{
     $QuestionContent = ($HTML.Content | pup -p 'head meta[name=\"description\"] attr{content}').Split("`n")
-    $QuestionTitle = ($HTML.Content | pup -p 'div[class=\"question-title clearfix\"] > h3 text{}').Trim().Split("`n")[1]
-    $DIFFCULT = ($HTML.Content | pup 'div[class=\"question-info text-info\"] > ul > li:nth-child(3) text{}').Split(":")[2].Trim()
+    $QuestionTitle = ($HTML.Content | pup -p 'div[class=\"question-title clearfix\"] h3 text{}').Trim().Split("`n")[1]
+    $DIFFCULT = ($HTML.Content | pup 'div#desktop-side-bar ul li span text{}').Split(":")[2].Trim()
     $JSON = $HTML.Content | pup -p 'div[ng-controller=\"AceCtrl as aceCtrl\"] attr{ng-init}'
 }
 $AUTHOR = $command
