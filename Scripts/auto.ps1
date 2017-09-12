@@ -34,7 +34,10 @@ else{
     $QuestionContent = ($HTML.Content | pup -p 'head meta[name=\"description\"] attr{content}').Split("`n")
     $QuestionTitle = ($HTML.Content | pup -p 'div[class=\"question-title clearfix\"] h3 text{}').Trim().Split("`n")[1]
     $DIFFCULT = ($HTML.Content | pup 'div#desktop-side-bar ul li span text{}').Split(":")[2].Trim()
-    $JSON = $HTML.Content | pup -p 'div[ng-controller=\"AceCtrl as aceCtrl\"] attr{ng-init}'
+    $JSON = ($HTML.Content | pup -p 'body script:contains(\"codeDefinition\") text{}') | Out-String
+    $JSONSTART = $JSON.IndexOf("=") + 1
+    $JSONLENGTH = $JSON.LastIndexOf(";") - $JSONSTART
+    $JSON = $JSON.Substring($JSONSTART,$JSONLENGTH).Trim().Replace("\u003D","=").Replace("\u003B",";").Replace("\u003C","<").Replace("\u003E",">").Replace("\u000A","`n").Replace("\u000D","`n").Replace("\u000D\u000A","`n").Replace("\u0022","""")
 }
 $AUTHOR = $command
 $CURRENT_DATE = Get-Date -format F
