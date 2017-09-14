@@ -38,3 +38,6 @@ namespace Algorithms
         }
     }
 }
+/********************************************************************************************************/
+when you run it, it will show the compile error:
+The type or namespace name `Solution' could not be found. Are you missing an assembly reference?
