@@ -7,7 +7,7 @@ namespace AlgorithmsTest
     public class AddTwoNumbersTest
     {
         [Theory]
-        [MemberData("InputData_Property")]
+        [MemberData(nameof(InputData_Property))]
         public void Test_AddTwoNumbers(ListNode<int> l1, ListNode<int> l2, List<int> output)
         {
             Assert.Equal(output,Solution002.AddTwoNumbers(l1, l2).ToList());
