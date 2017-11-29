@@ -112,3 +112,4 @@ LeetCode
 |101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [C#](./Algorithms/SymmetricTree.cs)|Easy|
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) | [C#](./Algorithms/BinaryTreeLevelOrderTraversal.cs)|Medium|
 |103|[Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/) | [C#](./Algorithms/BinaryTreeZigzagLevelOrderTraversal.cs)|Medium|
+|104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) | [C#](./Algorithms/MaximumDepthofBinaryTree.cs)|Easy|

@@ -37,7 +37,7 @@ else{
 }
 $JSONSTART = $JSON.IndexOf("=") + 1
 $JSONLENGTH = $JSON.LastIndexOf(";") - $JSONSTART
-$JSON = $JSON.Substring($JSONSTART,$JSONLENGTH).Trim().Replace("\u003D","=").Replace("\u003B",";").Replace("\u003C","<").Replace("\u003E",">").Replace("\u000A","`n").Replace("\u000D","`n").Replace("\u000D\u000A","`n").Replace("\u0022","""")
+$JSON = $JSON.Substring($JSONSTART,$JSONLENGTH).Trim().Replace("\u003D","=").Replace("\u003B",";").Replace("\u003C","<").Replace("\u003E",">").Replace("\u000A","`n").Replace("\u000D","`n").Replace("\u000D\u000A","`n").Replace("\u0022","""").Replace("\u002D","-")
 $AUTHOR = $command
 $CURRENT_DATE = Get-Date -format F
 $NUM = $QuestionTitle.Split(".")[0].Trim().PadLeft(3).Replace(" ", "0") 
@@ -46,10 +46,10 @@ $FILE = $TITLE.Replace(" ", "") + ".cs"
 $TESTFILE = $TITLE.Replace(" ", "") + "Test.cs"
 if ($IsWindows)
 {
-    $START = $JSON.IndexOf("[{")
+    $START = $JSON.IndexOf("codeDefinition: [{")
     $END = $JSON.IndexOf("},],")
     $JSON = $JSON.Remove($END).Trim() + "}]"
-    $CODE = $JSON.Substring($START)
+    $CODE = $JSON.Substring($START + 16)
 }
 else {
     $pattern = "(?s)\[\{'.*\},\]"
@@ -66,7 +66,7 @@ $FunName = $FuncInfo.Trim().Split(' ')[2].Substring(0,$FuncInfo.Trim().Split(' '
 $Params = $FuncInfo.Trim().Substring($FuncInfo.Trim().IndexOf('(')).Replace("(","").Replace(")","")
 $CLASS = $CLASS.Insert($CLASS.IndexOf("Solution") + 8, $NUM)
 $CLASS = $CLASS.Insert($CLASS.LastIndexOf("public") + 7, "static ")
-$CLASS = $CLASS.Insert($CLASS.IndexOf(") {") + 4, "throw new NotImplementedException(`"TODO`");")
+$CLASS = $CLASS.Insert($CLASS.LastIndexOf(") {") + 12, "throw new NotImplementedException(`"TODO`");")
 $COMMENT += "$COMMENT_TAG Source : $URL `n"
 $COMMENT += "$COMMENT_TAG Author : $AUTHOR `n"
 $COMMENT += "$COMMENT_TAG Date : $CURRENT_DATE `n"
@@ -88,16 +88,27 @@ $COMMENT += $CLASS
 $COMMENT += "}`n"
 $COMMENT > ../Algorithms/$FILE
 
+$Argument = ($Params.Split(',') | foreach{$_.Trim().Split(' ')[1]}) -join ", "
 $TESTCLASSNAME = $TITLE.Replace(" ", "") + "Test"
 $TESTCLASS = "using System;`nusing System.Collections.Generic;`nusing Algorithms;`nusing Algorithms.Utils;`nusing Xunit;`nnamespace AlgorithmsTest`n{`n"
 $TESTCLASS += "    public class $TESTCLASSNAME`n"
 $TESTCLASS += "    {`n"
 $TESTCLASS += "        [Theory]`n"
 $TESTCLASS += "        [InlineData()]`n"
+$TESTCLASS += "        [MemberData(nameof(InlineData))]`n"
 $TESTCLASS += "        public void TestMethod($Params, $ReturnType output)`n"
 $TESTCLASS += "        {`n" 
-$TESTCLASS += "            Assert.Equal(output, Solution$NUM.$FunName());`n" 
+$TESTCLASS += "            Assert.Equal(output, Solution$NUM.$FunName($Argument));`n" 
 $TESTCLASS += "        }`n" 
+$TESTCLASS += "        `n" 
+$TESTCLASS += "        public static IEnumerable<object[]> InlineData`n"
+$TESTCLASS += "        {`n"
+$TESTCLASS += "            get`n"
+$TESTCLASS += "            {`n"
+$TESTCLASS += "                 var driverData = new List<object[]>();`n"
+$TESTCLASS += "                 return driverData;`n"
+$TESTCLASS += "            }`n"
+$TESTCLASS += "        }`n"
 $TESTCLASS += "    }`n"
 $TESTCLASS += "}`n" 
 $TESTCLASS > ../AlgorithmsTest/$TESTFILE
