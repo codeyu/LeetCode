@@ -24,21 +24,20 @@ try {
 $HTML = Invoke-WebRequest -Uri $URL
 if ($IsWindows)
 {
-    $QuestionContent = ($HTML.ParsedHtml.getElementsByTagName(‘meta’) | where {$_.getAttributeNode('name').Value -eq 'description'} ).content.Split("`n")
+    $QuestionContent = ($HTML.ParsedHtml.getElementsByTagName(‘meta’) | where {$_.getAttributeNode('name').Value -eq 'description'} ).content.Split("`n").Trim()
     $QuestionTitle = (($HTML.ParsedHtml.getElementsByTagName(‘div’) | Where{ $_.className -eq ‘question-title clearfix’ })).innerText.Split("`n")[0]
-    $DIFFCULT = ($HTML.ParsedHtml.getElementsByTagName(‘div’) | Where{ $_.className -eq ‘question-info text-info’ } ).innerText.Split("`n")[2].Split(":")[1].Trim()
-    $NG =  ($HTML.ParsedHtml.body.getElementsByTagName(‘div’) | where {$_.getAttributeNode('ng-controller').Value -eq 'AceCtrl as aceCtrl'} )
-    $JSON = $NG.getAttributeNode('ng-init').Value
+    $DIFFCULT = $HTML.ParsedHtml.getElementByID(‘desktop-side-bar’).innerText.Trim().Split("`n")[0].Split(":")[1].Trim()
+    $JSON =  ($HTML.ParsedHtml.body.getElementsByTagName(‘script’) |  Where{ $_.text -like '*codeDefinition*' }).text
 }
 else{
     $QuestionContent = ($HTML.Content | pup -p 'head meta[name=\"description\"] attr{content}').Split("`n")
     $QuestionTitle = ($HTML.Content | pup -p 'div[class=\"question-title clearfix\"] h3 text{}').Trim().Split("`n")[1]
     $DIFFCULT = ($HTML.Content | pup 'div#desktop-side-bar ul li span text{}').Split(":")[2].Trim()
-    $JSON = ($HTML.Content | pup -p 'body script:contains(\"codeDefinition\") text{}') | Out-String
-    $JSONSTART = $JSON.IndexOf("=") + 1
-    $JSONLENGTH = $JSON.LastIndexOf(";") - $JSONSTART
-    $JSON = $JSON.Substring($JSONSTART,$JSONLENGTH).Trim().Replace("\u003D","=").Replace("\u003B",";").Replace("\u003C","<").Replace("\u003E",">").Replace("\u000A","`n").Replace("\u000D","`n").Replace("\u000D\u000A","`n").Replace("\u0022","""")
+    $JSON = ($HTML.Content | pup -p 'body script:contains(\"codeDefinition\") text{}') | Out-String   
 }
+$JSONSTART = $JSON.IndexOf("=") + 1
+$JSONLENGTH = $JSON.LastIndexOf(";") - $JSONSTART
+$JSON = $JSON.Substring($JSONSTART,$JSONLENGTH).Trim().Replace("\u003D","=").Replace("\u003B",";").Replace("\u003C","<").Replace("\u003E",">").Replace("\u000A","`n").Replace("\u000D","`n").Replace("\u000D\u000A","`n").Replace("\u0022","""")
 $AUTHOR = $command
 $CURRENT_DATE = Get-Date -format F
 $NUM = $QuestionTitle.Split(".")[0].Trim().PadLeft(3).Replace(" ", "0") 
