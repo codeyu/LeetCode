@@ -113,3 +113,4 @@ LeetCode
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) | [C#](./Algorithms/BinaryTreeLevelOrderTraversal.cs)|Medium|
 |103|[Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/) | [C#](./Algorithms/BinaryTreeZigzagLevelOrderTraversal.cs)|Medium|
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) | [C#](./Algorithms/MaximumDepthofBinaryTree.cs)|Easy|
+|105|[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [C#](./Algorithms/ConstructBinaryTreefromPreorderandInorderTraversal.cs)|Medium|
