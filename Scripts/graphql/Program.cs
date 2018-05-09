@@ -1,54 +1,50 @@
 ﻿using System;
-using GraphQL.Client;
-using GraphQL.Common.Request;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-
+using System.Linq;
 namespace graphql
 {
     class Program
     {
+        private static readonly Leetcode lc = new Leetcode();
         static void Main(string[] args)
         {
+            var questionId = 0L;
+            if(args.Length > 0)
+            {
+                long.TryParse(args[0], out questionId);
+            }
+            if(questionId <= 0)
+            {
+                var s = "";
+                do  
+                {
+                    Console.WriteLine("Please enter a QuestionId:");
+                    s = Console.ReadLine();
+                    long.TryParse(s, out questionId);
+                
+                } while (questionId <= 0);
+            }
             try
             {
-                GetLeetcodeAsync().Wait();
+                var questionStat = lc.GetAllAsync().Result;
+                if(questionStat != null && questionStat.StatStatusPairs.Any())
+                {
+                    var statStatusPair = questionStat.StatStatusPairs.Where(x=>x.Stat.QuestionId==questionId).FirstOrDefault();
+                    if(statStatusPair != null)
+                    {
+                        var QuestionDetail = lc.GetLeetcodeAsync(statStatusPair.Stat.QuestionTitleSlug).Result;
+                        Console.WriteLine(QuestionDetail.ToJson());
+                    }
+                }
+                
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"There was an exception: {ex.ToString()}");
             }
         }
-        static private async Task GetLeetcodeAsync()
-        {
-            var heroAndFriendsRequest = new GraphQLRequest
-            {
-                Query = @"
-                    query getQuestionDetail($titleSlug: String!) {
-                    question(titleSlug: $titleSlug) {
-                    questionId
-                    questionTitle
-                    questionTitleSlug
-                    content
-                    difficulty
-                    categoryTitle
-                    codeDefinition
-                  }
-                
-                }",
-                OperationName = "getQuestionDetail",
-                Variables = new
-                {
-                    titleSlug = "house-robber"
-                }
-            };
-            var graphQLClient = new GraphQLClient("https://leetcode.com/graphql");
-            var graphQLResponse = await graphQLClient.GetAsync(heroAndFriendsRequest);
-            var questionDetail = graphQLResponse.GetDataFieldAs<QuestionDetail>("question");
-            Console.WriteLine(questionDetail.ToJson());
-            var codeDefinitions = JsonConvert.DeserializeObject<List<CodeDefinition>>(questionDetail.CodeDefinition);
-            Console.WriteLine(codeDefinitions[0].ToJson());
-        }
+        
     }
 }

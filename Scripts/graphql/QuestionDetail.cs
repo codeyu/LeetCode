@@ -28,6 +28,10 @@ namespace graphql
 
         [JsonProperty("codeDefinition")]
         public string CodeDefinition { get; set; }
+
+        [JsonProperty("questionDetailUrl")]
+        public string QuestionDetailUrl{get;set;}
+        public List<CodeDefinition> CodeDefinitions => JsonConvert.DeserializeObject<List<CodeDefinition>>(CodeDefinition);
     }
 
     public partial class QuestionDetail
