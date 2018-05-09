@@ -6,6 +6,7 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <PackageReference Include="CmdRunner" Version="0.1.0" />
     <PackageReference Include="GraphQL.Client" Version="1.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="refit" Version="4.3.0" />
