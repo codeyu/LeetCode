@@ -34,8 +34,9 @@ namespace graphql
                     var statStatusPair = questionStat.StatStatusPairs.Where(x=>x.Stat.QuestionId==questionId).FirstOrDefault();
                     if(statStatusPair != null)
                     {
-                        var QuestionDetail = lc.GetLeetcodeAsync(statStatusPair.Stat.QuestionTitleSlug).Result;
-                        Console.WriteLine(QuestionDetail.ToJson());
+                        var questionDetail = lc.GetLeetcodeAsync(statStatusPair.Stat.QuestionTitleSlug).Result;
+                        TemplateOpt temp = new TemplateOpt(questionDetail);
+                        temp.Save();
                     }
                 }
                 

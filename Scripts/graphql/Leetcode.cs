@@ -9,7 +9,7 @@ namespace graphql
 {
     public class Leetcode
     {
-        public string BaseUrl => "https://leetcode.com";
+        public static string BaseUrl => "https://leetcode.com";
         public async Task<QuestionStat> GetAllAsync()
         {
             var leetcodeApi = RestService.For<ILeetcode>(BaseUrl);
@@ -32,6 +32,9 @@ namespace graphql
                     difficulty
                     categoryTitle
                     codeDefinition
+                    sampleTestCase
+                    metaData
+                    questionDetailUrl
                   }
                 
                 }",
