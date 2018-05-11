@@ -1,5 +1,18 @@
-Some Scripts to Save Time
+Some tools to Save Time
 ============
+### graphql
+
+1. install dotnet core
+2. `cd Scripts/graphql`
+3. `dotnet build`
+4. if you want to generate problem [Triangle](https://leetcode.com/problems/triangle), which's number is 120.
+   so, just run:   
+   `dotnet run 120`
+5. enjoy it!
+
+--- 
+
+ OBSOLETE
 
 ### auto.ps1
 
